@@ -18,11 +18,12 @@ total_price = product_price_1 + product_price_2 + product_price_3
 # The .2f formatting specification for 2 decimal in price
 
 receipt = f"""
-\n\n\
+{'*' * 40}
+\n
 \t\t\t{company_name}
 \t\t\t{company_address_1}
 \t\t\t{company_address_2}
-{'-' * 40}
+\n
 {'-' * 40}
 Product Name \t\t Product Price
 {product_name_1.ljust(20)} ${product_price_1:.2f}
@@ -34,7 +35,10 @@ Product Name \t\t Product Price
 \t\t\t\t\t ${total_price:.2f}
 {'-' * 40}
 {'-' * 40}
+\n
 Thank you for shopping with us today!
+\n
+{'*' * 40}
 """
 
 # Print the receipt
