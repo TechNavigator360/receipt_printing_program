@@ -1,7 +1,7 @@
 # Company details
-company_name = "Tech Store"
-company_address_1 = "123 Tech Ave"
-company_address_2 = "Innovation City"
+company_name = "Coding Temple, Inc."
+company_address_1 = "283 Franklin St."
+company_address_2 = "Boston, MA"
 
 # Product details
 product_name_1 = "Books"
@@ -24,6 +24,7 @@ receipt = f"""
 \t\t\t{company_address_1}
 \t\t\t{company_address_2}
 \n
+{'-' * 40}
 {'-' * 40}
 Product Name \t\t Product Price
 {product_name_1.ljust(20)} ${product_price_1:.2f}
