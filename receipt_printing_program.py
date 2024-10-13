@@ -1,3 +1,5 @@
+# This is a school assignment
+
 # Company details
 company_name = "Coding Temple, Inc."
 company_address_1 = "283 Franklin St."
