@@ -1,5 +1,7 @@
 # This is a school assignment
 
+# Definitions
+
 # Company details
 company_name = "Coding Temple, Inc."
 company_address_1 = "283 Franklin St."
@@ -16,32 +18,39 @@ product_price_3 = 124.89
 # Total calculation
 total_price = product_price_1 + product_price_2 + product_price_3
 
-# Formatting the receipt with empty lines
+# Define widths for columns
+line_length = 40 # Number of characters in one line
+header_tab_space = 8 # Number of spaces that simulate tabs for header alignment
+product_column_width = 20
+price_column_width = 20
+
+
+# Formatting the receipt
 # The .2f formatting specification for 2 decimal in price
 
 receipt = f"""
-{'*' * 40}
+{'*' * line_length}
 \n
-\t\t\t{company_name}
-\t\t\t{company_address_1}
-\t\t\t{company_address_2}
+{" " * header_tab_space}{company_name}
+{" " * header_tab_space}{company_address_1}
+{" " * header_tab_space}{company_address_2}
 \n
-{'-' * 40}
-{'-' * 40}
-Product Name \t\t Product Price
-{product_name_1.ljust(20)} ${product_price_1:.2f}
-{product_name_2.ljust(20)} ${product_price_2:.2f}
-{product_name_3.ljust(20)} ${product_price_3:.2f}
-{'-' * 40}
-{'-' * 40}
-\t\t\t\t\t Total
-\t\t\t\t\t ${total_price:.2f}
-{'-' * 40}
-{'-' * 40}
+{'_' * line_length}
+{'_' * line_length}
+{"Product Name".ljust(product_column_width)} Product Price
+{product_name_1.ljust(product_column_width)} ${product_price_1:.2f}
+{product_name_2.ljust(product_column_width)} ${product_price_2:.2f}
+{product_name_3.ljust(product_column_width)} ${product_price_3:.2f}
+{'_' * line_length}
+{'_' * line_length}
+{' ' * price_column_width} Total
+{' ' * price_column_width} ${total_price:.2f}
+{'_' * line_length}
+{'_' * line_length}
 \n
-Thank you for shopping with us today!
+{"Thank you for shopping with us today!".center(line_length)}
 \n
-{'*' * 40}
+{'*' * line_length}
 """
 
 # Print the receipt
