@@ -53,5 +53,7 @@ receipt = f"""
 {'*' * line_length}
 """
 
+print("nick is cool")
+
 # Print the receipt
 print(receipt)
